@@ -1,2 +1,4 @@
 # ExercicioTest
-Exercício de TDD
+Entrega do Trabalho.
+Dupla:
+David e Rafael
