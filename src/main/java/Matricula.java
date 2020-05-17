@@ -1,4 +1,16 @@
 public class Matricula {
+
+    public String academiaSelecionada;
+
+    public String setAcademia(String academiaSelecionada) {
+        this.academiaSelecionada = academiaSelecionada;
+        return this.academiaSelecionada;
+    }
+
+    public String getAcademiaName() {
+        return academiaSelecionada;
+    }
+
     public String Adiciona(String nome, String curso, String academia){
         if (nome.isEmpty()){
             return "Nome obrigatório";
@@ -11,21 +23,22 @@ public class Matricula {
         }
     }
 
-    public String GetAcademia(String letraDaAcademia){
-        String academiaSelecionada = "";
+    public String GetAcademia(char letraDaAcademia){
         switch (letraDaAcademia){
-            case "M":
-                academiaSelecionada = "Matriz";
+            case 'M':
+               this.academiaSelecionada = "Matriz";
                 break;
-            case  "F":
-                academiaSelecionada = "Filial";
+            case  'F':
+                this.academiaSelecionada = "Filial";
                 break;
             default:
-                academiaSelecionada = "";
+                this.academiaSelecionada = "";
                 break;
         }
         return academiaSelecionada;
     }
+
+
     public String PiscinaLiberada(int idade){
         if (idade < 8)
             return "Piscina Pequena";
@@ -38,4 +51,9 @@ public class Matricula {
         return "";
     }
 
+    public String Delete(char f) {
+        String acao =  getAcademiaName();
+        String valor = GetAcademia(f);
+        return acao + valor;
+    }
 }
