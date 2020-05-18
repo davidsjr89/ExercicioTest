@@ -47,9 +47,6 @@ public class Matricula {
         else
             return "Piscina Grande";
     }
-    public String VerificaSeAlunoJaEstaMatriculado(String _aluno){
-        return "";
-    }
 
     public String Delete(char f) {
         String acao =  getAcademiaName();
