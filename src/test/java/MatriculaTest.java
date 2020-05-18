@@ -135,19 +135,18 @@ public class MatriculaTest {
 
     @Test
     public void testeDeletaMatricula() throws Exception {
+        //Arrange
         Matricula matricula = new Matricula();
-
         final String METHOD = "setAcademia";
 
         Matricula spy = PowerMockito.spy(matricula);
-
         PowerMockito.when(spy, METHOD, "Academia Deletada: ").thenReturn((String)"Academia Deletada: ");
 
         String atual = "";
         String esperado = "Academia Deletada: Filial";
-
+        //act
         atual = spy.Delete('F');
-
+        //Assert
         Assert.assertEquals(esperado, atual);
 
 
